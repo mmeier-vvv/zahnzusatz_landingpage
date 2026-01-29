@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Zahnzusatzversicherung Landingpage</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lora:wght@400;500;600&display=swap" rel="stylesheet" />
+    
+    <!-- Chatbase Widget Custom Styling -->
+    <style>
+      /* Chatbase Bubble Button - Teal Branding */
+      #chatbase-bubble-button {
+        background-color: #1B8B7E !important;
+        width: 60px !important;
+        height: 60px !important;
+        border-radius: 50% !important;
+        animation: pulse-chat 2s infinite !important;
+      }
+      
+      #chatbase-bubble-button:hover {
+        background-color: #156b63 !important;
+      }
+      
+      /* Pulse Animation for Chat Button */
+      @keyframes pulse-chat {
+        0%, 100% {
+          box-shadow: 0 4px 12px rgba(27, 139, 126, 0.3);
+          transform: scale(1);
+        }
+        50% {
+          box-shadow: 0 4px 20px rgba(27, 139, 126, 0.5);
+          transform: scale(1.05);
+        }
+      }
+      
+      /* Chat Icon - Larger */
+      #chatbase-bubble-button svg {
+        width: 36px !important;
+        height: 36px !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      defer
+      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    
+    <!-- Chatbase AI Bot -->
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="LSJBnNuHnDnD6Edt9WfcI";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+  </body>
+
+</html>
