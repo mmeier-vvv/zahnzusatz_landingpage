@@ -1,0 +1,7 @@
+diff --git a/node_modules/wouter/index.d.ts b/node_modules/wouter/index.d.ts
+index 1234567..abcdefg 100644
+--- a/node_modules/wouter/index.d.ts
++++ b/node_modules/wouter/index.d.ts
+@@ -1 +1 @@
+-export * from './dist/index';
++export * from './dist/index';
