@@ -738,15 +738,15 @@ export default function Home() {
             <div>
               <h4 className="font-bold text-white mb-4">Kontakt</h4>
               <p className="text-sm"><a href="https://www.vvv360versichert.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">www.vvv360versichert.com</a></p>
-              <p className="text-sm"><a href="https://www.vvv360versichert.com/impressum" className="hover:text-white">Impressum</a></p>
-              <p className="text-sm"><a href="https://www.vvv360versichert.com/datenschutz" className="hover:text-white">Datenschutz</a></p>
+              <p className="text-sm"><a href="https://www.vvv360versichert.com/impressum" target="_blank" rel="noopener noreferrer" className="hover:text-white">Impressum</a></p>
+              <p className="text-sm"><a href="https://www.vvv360versichert.com/datenschutz" target="_blank" rel="noopener noreferrer" className="hover:text-white">Datenschutz</a></p>
             </div>
             <div className="flex items-center justify-end">
               <img src="/images/vvv-monica-logo.png" alt="VVV.MONICA" className="h-24 object-contain" />
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>&copy; 2026 Monica Meier, unabhängige Versicherungsmaklerin bei A&K Vorsorgespezialisten UG. Alle Rechte vorbehalten. | <a href="https://www.vvv360versichert.com/impressum" className="hover:text-white">Impressum</a> | <a href="https://www.vvv360versichert.com/datenschutz" className="hover:text-white">Datenschutz</a></p>
+            <p>&copy; 2026 Monica Meier, unabhängige Versicherungsmaklerin bei A&K Vorsorgespezialisten UG. Alle Rechte vorbehalten. | <a href="https://www.vvv360versichert.com/impressum" target="_blank" rel="noopener noreferrer" className="hover:text-white">Impressum</a> | <a href="https://www.vvv360versichert.com/datenschutz" target="_blank" rel="noopener noreferrer" className="hover:text-white">Datenschutz</a></p>
           </div>
         </div>
       </footer>
