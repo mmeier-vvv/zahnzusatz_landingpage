@@ -1,9 +1,10 @@
-import { Button } from "@/components/ui/button";
 import { Heart, Smile, DollarSign, Clock, Shield, Star, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 /**
  * Design Philosophy: Modern Professional Insurance Landing Page
@@ -17,6 +18,7 @@ export default function Home() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [, setLocation] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [faqOpen, setFaqOpen] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -209,9 +211,7 @@ export default function Home() {
               <button onClick={() => { setFaqOpen(true); setMobileMenuOpen(false); }} className="text-gray-700 hover:text-primary transition font-medium py-2 text-left">
                 FAQ
               </button>
-              <a href="/health-check" className="w-full block" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white mt-4">Jetzt Beratung anfordern</Button>
-              </a>
+              <Button onClick={() => { setLocation("/health-check"); setMobileMenuOpen(false); }} className="w-full bg-primary hover:bg-primary/90 text-white mt-4">Jetzt Beratung anfordern</Button>
             </div>
           </div>
         )}
@@ -251,11 +251,9 @@ export default function Home() {
               </div>
 
               {/* CTA Button */}
-              <a href="/health-check">
-                <Button className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                  Jetzt Beratung anfordern
-                </Button>
-              </a>
+              <Button onClick={() => setLocation("/health-check")} className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                Jetzt Beratung anfordern
+              </Button>
 
               <p className="text-sm text-gray-500 mt-4">
                 ✓ Keine versteckten Gebühren. ✓ Unverbindlich.
@@ -593,11 +591,9 @@ export default function Home() {
             <p className="text-gray-700 mb-6">
               Alle Preise sind Beispielwerte. Die tatsächlichen Beitäge hängen von deinem Alter, Gesundheitsstatus und dem gewählten Tarif ab. Der beste Tarif für Sie hängt von Ihrer persönlichen Situation ab – ich berate Sie gerne unabhängig!
             </p>
-            <a href="/health-check">
-              <Button className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6">
-                Jetzt persönliche Beratung anfordern
-              </Button>
-            </a>
+            <Button onClick={() => setLocation("/health-check")} className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6">
+              Jetzt persönliche Beratung anfordern
+            </Button>
           </div>
         </div>
       </section>
@@ -781,6 +777,8 @@ export default function Home() {
           </div>
         </DialogContent>
       </Dialog>
+
+
     </div>
   );
 }
